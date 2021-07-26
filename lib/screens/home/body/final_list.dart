@@ -8,13 +8,12 @@ class FinalList extends StatefulWidget {
 }
 
 class _FinalListState extends State<FinalList> {
-  
   @override
   Widget build(BuildContext context) {
     return new Container(
       child: new ListView.builder(
           shrinkWrap: true,
-          itemCount: 10,
+          itemCount: 100,
           itemBuilder: (BuildContext context, int index) {
             return new Card(
               child: new Container(
@@ -24,8 +23,22 @@ class _FinalListState extends State<FinalList> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
-                      Text("titles[index]"),
-                      Text("prices[index].toString()"),
+                      Row(
+                        children: [
+                          Icon(Icons.person),
+                          Column(
+                            children: [
+                              Text(
+                                "Name",
+                                style: TextStyle(fontWeight: FontWeight.bold),
+                              ),
+                              Text("About"),
+                              Text("Contact Number"),
+                            ],
+                          ),
+                        ],
+                      ),
+                      Icon(Icons.add)
                     ],
                   ),
                 ),
