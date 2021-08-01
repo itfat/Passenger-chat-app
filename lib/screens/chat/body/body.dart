@@ -7,12 +7,11 @@ class ChatMessage {
 }
 
 List<ChatMessage> messages = [
-  ChatMessage(messageContent: "Hello, Will", messageType: "receiver"),
+  ChatMessage(messageContent: "Hello", messageType: "receiver"),
   ChatMessage(messageContent: "How have you been?", messageType: "receiver"),
   ChatMessage(
-      messageContent: "Hey Kriss, I am doing fine dude. wbu?",
-      messageType: "sender"),
-  ChatMessage(messageContent: "ehhhh, doing OK.", messageType: "receiver"),
+      messageContent: "Hey I am doing fine dude. wbu?", messageType: "sender"),
+  ChatMessage(messageContent: "OK.", messageType: "receiver"),
   ChatMessage(
       messageContent: "Is there any thing wrong?", messageType: "sender"),
 ];
@@ -46,7 +45,7 @@ class Body extends StatelessWidget {
                 ),
                 CircleAvatar(
                   backgroundImage: NetworkImage(
-                      "<https://randomuser.me/api/portraits/men/5.jpg>"),
+                      "https://www.google.com/imgres?imgurl=https%3A%2F%2Fimage.flaticon.com%2Ficons%2Fpng%2F512%2F1791%2F1791400.png&imgrefurl=https%3A%2F%2Fwww.flaticon.com%2Fpremium-icon%2Fcute_1791400&tbnid=qWwUa4rd67PdaM&vet=12ahUKEwiZ-JePtJDyAhUW44UKHfDuCqwQMygOegUIARC5AQ..i&docid=cgYU9ZrpAWn8cM&w=512&h=512&q=cute%20user&ved=2ahUKEwiZ-JePtJDyAhUW44UKHfDuCqwQMygOegUIARC5AQ"),
                   maxRadius: 20,
                 ),
                 SizedBox(
@@ -58,7 +57,7 @@ class Body extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       Text(
-                        "Kriss Benwat",
+                        "Name",
                         style: TextStyle(
                             fontSize: 16, fontWeight: FontWeight.w600),
                       ),
@@ -102,7 +101,7 @@ class Body extends StatelessWidget {
                       borderRadius: BorderRadius.circular(20),
                       color: (messages[index].messageType == "receiver"
                           ? Colors.grey.shade200
-                          : Colors.blue[200]),
+                          : Colors.yellow[200]),
                     ),
                     padding: EdgeInsets.all(16),
                     child: Text(
@@ -129,7 +128,7 @@ class Body extends StatelessWidget {
                       height: 30,
                       width: 30,
                       decoration: BoxDecoration(
-                        color: Colors.lightBlue,
+                        color: Colors.yellow[800],
                         borderRadius: BorderRadius.circular(30),
                       ),
                       child: Icon(
@@ -160,7 +159,7 @@ class Body extends StatelessWidget {
                       color: Colors.white,
                       size: 18,
                     ),
-                    backgroundColor: Colors.yellow,
+                    backgroundColor: Colors.yellow[800],
                     elevation: 0,
                   ),
                 ],

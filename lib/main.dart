@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:passenger_chat_app/screens/home/home_screen.dart';
 import 'routes.dart';
+import 'screens/scanner/scan_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
 
       // We use routeName so that we dont need to remember the name
-      initialRoute: HomeScreen.routename,
+      initialRoute: ScanScreen.routename,
       routes: routes,
     );
   }
